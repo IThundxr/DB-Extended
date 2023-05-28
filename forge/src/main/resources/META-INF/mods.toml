@@ -1,35 +1,28 @@
 modLoader = "javafml"
 loaderVersion = "[${forge_version},)"
-#issueTrackerURL = ""
-license = "Insert License Here"
+issueTrackerURL = "https://github.com/IThundxr/DB-Extended/issues"
+license = "GNU General Public License v3.0"
 
 [[mods]]
-modId = "examplemod"
+modId = "dbe"
 version = "${version}"
-displayName = "Example Mod"
-authors = "Me!"
+displayName = "Dave's Building Extended"
+authors = "IThundxr, Rabbitminers, SpaceDave"
 description = '''
 This is an example description! Tell everyone what your mod is about!
 '''
 logoFile = "icon.png"
 
-[[dependencies.examplemod]]
+[[dependencies.dbe]]
 modId = "forge"
 mandatory = true
 versionRange = "[${forge_version},)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.examplemod]]
+[[dependencies.dbe]]
 modId = "minecraft"
 mandatory = true
 versionRange = "${minecraft_version}"
 ordering = "NONE"
 side = "BOTH"
-
-[[dependencies.examplemod]]
-modId="create"
-mandatory=true
-versionRange="${create_version}"
-ordering="NONE"
-side="BOTH"

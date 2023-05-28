@@ -1,28 +1,27 @@
 {
   "schemaVersion": 1,
-  "id": "examplemod",
+  "id": "dbe",
   "version": "${version}",
-  "name": "Example Mod",
+  "name": "Dave's Building Extended",
   "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
-    "Me!"
+    "IThundxr", "Rabbitminers", "SpaceDave"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://ithundxr.dev/",
+    "sources": "https://github.com/IThundxr/DB-Extended"
   },
-  "license": "Insert License Here",
-  "icon": "assets/examplemod/icon.png",
+  "license": "GNU General Public License v3.0",
+  "icon": "assets/dbe/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.examplemod.fabric.ExampleModFabric"
+      "dev.ithundxr.mods.dbe.fabric.DBEImpl"
+    ],
+    "client": [
+      "dev.ithundxr.mods.dbe.fabric.DBEClientImpl"
     ]
   },
-  "mixins": [
-    "examplemod.mixins.json",
-    "examplemod-common.mixins.json"
-  ],
   "depends": {
     "minecraft": "${minecraft_version}",
     "fabricloader": ">=${fabric_loader_version}",

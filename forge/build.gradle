@@ -27,11 +27,10 @@ configurations {
 repositories {
     // mavens for Forge-exclusives
     maven { url = "https://maven.theillusivec4.top/" } // Curios
-    maven { // Create Forge and Registrate Forge
+    maven { // Registrate Forge
         url = "https://maven.tterrag.com/"
         content {
             includeGroup("com.tterrag.registrate")
-            includeGroup("com.simibubi.create")
         }
     }
 }
@@ -41,10 +40,7 @@ dependencies {
     common(project(path: ":common", configuration: "namedElements")) { transitive = false }
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
 
-    // Create and its dependencies
-    modImplementation("com.simibubi.create:create-${minecraft_version}:${create_forge_version}:slim") { transitive = false }
     modImplementation("com.tterrag.registrate:Registrate:${registrate_forge_version}")
-    modImplementation("com.jozufozu.flywheel:flywheel-forge-${flywheel_forge_minecraft_version}:${flywheel_forge_version}")
 
     // Development QOL
     modLocalRuntime("mezz.jei:jei-${minecraft_version}-forge:${jei_version}") { transitive = false }
@@ -59,7 +55,6 @@ processResources {
             "version", version,
             "forge_version", forge_version.split("\\.")[0], // only specify major version of forge
             "minecraft_version", minecraft_version,
-            "create_version", create_forge_version.split("-")[0] // cut off build number
     )
     properties.forEach((k, v) -> inputs.property(k, v))
 
